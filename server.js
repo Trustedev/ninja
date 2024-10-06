@@ -1,16 +1,22 @@
 const express = require('express');
 const mysql = require('mysql');
-
+const fs = require('fs');
+const path = require('path');
 const app = express();
 app.use(express.json());
 
 // MySQL bağlantısı
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'admin',  // MySQL kullanıcı adınız
-  password: 'admin',  // MySQL şifreniz
-  database: 'userdb'
-}); 
+    host: 'db-mysql-fra1-25321-do-user-17974490-0.l.db.ondigitalocean.com',
+    user: 'doadmin',
+    password: 'AVNS_bkYKVyoKohpk_vyZ7BS',
+    database: 'userdb',
+    port: 25060,
+    ssl: {
+      ca: fs.readFileSync(path.join(__dirname, 'certs', 'ca-certificate.crt')) // CA sertifikasının yolunu belirtin
+    }
+  });
+  
 
 db.connect(err => {
   if (err) throw err;
