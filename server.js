@@ -35,7 +35,7 @@ app.get('/api/check-key', (req, res) => {
     if (err || results.length === 0 || new Date(results[0].expiry) < new Date()) {
       return res.status(403).send('Access denied');
     }
-    res.json({ valid: true, username: results[0].username, results[0].expiry}); // Kullanıcı adını döndür
+    res.json({ valid: true, username: results[0].username, expiry: results[0].expiry}); // Kullanıcı adını döndür
   });
 });
 
