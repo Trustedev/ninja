@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 app.use(express.json());
 
-NODE_TLS_REJECT_UNAUTHORIZED=0 node server.js
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 // MySQL bağlantısı
 const db = mysql.createConnection({
