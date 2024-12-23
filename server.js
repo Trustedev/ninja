@@ -5,6 +5,8 @@ const path = require('path');
 const app = express();
 app.use(express.json());
 
+NODE_TLS_REJECT_UNAUTHORIZED=0 node server.js
+
 // MySQL bağlantısı
 const db = mysql.createConnection({
     host: 'babalarfinal-do-user-18635273-0.f.db.ondigitalocean.com',
