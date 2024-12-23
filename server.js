@@ -7,9 +7,9 @@ app.use(express.json());
 
 // MySQL bağlantısı
 const db = mysql.createConnection({
-    host: 'db-mysql-fra1-25321-do-user-17974490-0.l.db.ondigitalocean.com',
+    host: 'babalarfinal-do-user-18635273-0.f.db.ondigitalocean.com',
     user: 'doadmin',
-    password: 'AVNS_bkYKVyoKohpk_vyZ7BS',
+    password: 'AVNS_K2-qCPHnL6138IdbAnv',
     database: 'userdb',
     port: 25060,
     ssl: {
